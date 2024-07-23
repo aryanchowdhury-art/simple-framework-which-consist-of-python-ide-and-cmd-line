@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Sections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="section-a">
+        <div class="header">
+            <button class="icon-button" id="user-button"><i class="fas fa-user"></i></button>
+            <button class="icon-button" id="settings-button"><i class="fas fa-cog"></i></button>
+        </div>
+        <div class="footer">
+            <button class="icon-button" id="brain-button"><i class="fas fa-brain"></i></button>
+            <button class="icon-button" id="bulb-button"><i class="fas fa-lightbulb"></i></button>
+            <button class="icon-button" id="question-mark-button"><i class="fas fa-question"></i></button>
+        </div>
+    </div>
+    <div class="section-b">
+        <button class="icon-button" id="window-button"><i class="fas fa-window-maximize"></i></button>
+    </div>
+    <div class="section-c">
+        <div class="section" id="section1"></div>
+        <div class="section" id="section2"></div>
+        <div class="section" id="section3"></div>
+        <div class="section" id="section4"></div>
+    </div>
+
+    <div id="settings-menu" class="dropdown-menu">
+        <ul>
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+    </div>
+
+    <div id="user-window" class="popup-window">
+        <h2>User Information</h2>
+        <p>Details about the user...</p>
+    </div>
+
+    <div id="window-popup" class="popup-window">
+        <div class="popup-content">
+            <div id="window1" class="inner-window">
+                <img src="images/demo.gif" alt="Terminal" class="gif-image">
+            </div>
+            <div id="window2" class="inner-window">
+                <img src="images/download.jpeg" alt="Window 2" class="gif-image">
+            </div>
+            <div id="window3" class="inner-window">
+                <img src="images/chatgpt.gif" alt="Window 3" class="gif-image">
+            </div>
+            <div id="window4" class="inner-window">
+                <img src="images/browser.gif" alt="Window 4" class="gif-image">
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

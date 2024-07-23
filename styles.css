@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-a {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100vh;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 2;
+}
+
+.section-b {
+    position: fixed;
+    top: 0;
+    left: 100px;
+    width: calc(100% - 100px);
+    height: 50px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.section-c {
+    margin-left: 150px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    z-index: 1;
+}
+
+.section {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.header, .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.icon-button:hover {
+    background-color: #f0f0f0;
+}
+
+#window-button {
+    transition: transform 0.3s;
+}
+
+#window-button:hover {
+    transform: translateX(10px);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.popup-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+}
+
+.popup-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-window {
+    width: 50%;
+    height: 100px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.gif-image {
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Maintain aspect ratio */
+    display: block; /* Ensure no extra space around the image */
+}
+
+.terminal-content {
+    font-family: monospace;
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    border: 1px solid #333;
+    height: 100%;
+    overflow-y: auto;
+    width: 100%; /* Ensures the terminal fills the section */
+    box-sizing: border-box;
+}
+
+.terminal-input {
+    border: none;
+    background: transparent;
+    color: #0f0;
+    width: 100%;
+    outline: none;
+}
+
+.terminal-prompt, .terminal-command-text {
+    display: inline;
+}
+
+.code-editor-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #1e1e1e; /* Dark theme background */
+    color: #dcdcdc; /* Light text color */
+}
+
+.code-editor-header {
+    background-color: #333;
+    padding: 5px;
+    color: #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.code-editor-header .file-name {
+    font-weight: bold;
+}
+
+.code-editor-body {
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+}
+
+.code-editor {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-family: monospace;
+    font-size: 14px;
+    outline: none;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.code-editor:focus {
+    outline: none;
+}
